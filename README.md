@@ -1,2 +1,2 @@
 # Dotfile
-Some file for Hyprland
+Some files for Hyprland
