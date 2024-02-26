@@ -1,2 +1,2 @@
 # Dotfile
-Some files for Hyprland
+Some files for Hyprland with Waybar
