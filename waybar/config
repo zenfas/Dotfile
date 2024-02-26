@@ -5,7 +5,7 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces"],
+    "modules-left": ["custom/appmenu","hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
     "modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray", "custom/power"],
     // Modules configuration
@@ -131,8 +131,7 @@
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
-        //"on-click": "konsole -e /usr/bin/rofi-wifi-menu"
-        "on-click": "/usr/bin/rofi-wifi-menu"
+        "on-click-right": "/usr/bin/rofi-wifi-menu"
        // "on-click": "konsole -e nmtui"
     },
     "pulseaudio": {
@@ -170,6 +169,16 @@
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    },
+        // Rofi Application Launcher
+    "custom/appmenu": {
+        "format": "Apps",
+        //"on-click": "rofi -show drun -replace",
+        "on-click": "rofi -show drun -replace -show-icons -location 1",
+        //"on-click-right": "~/dotfiles/hypr/scripts/keybindings.sh",
+        "tooltip": false
     }
+
+
 }
 
